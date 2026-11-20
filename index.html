@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CarmenClaro – Hospital Materno Infantil El Carmen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="#inicio" data-go="inicio"><span class="mark" aria-hidden="true"></span>CarmenClaro</a>
+  <nav aria-label="Secciones">
+    <button data-go="inicio">Inicio</button>
+    <button data-go="cronologia">Qué pasó</button>
+    <button data-go="calculadora">Cuánto cuesta</button>
+    <button data-go="presupuesto">Cómo funciona el dinero</button>
+    <button data-go="reportar">Reportar o consultar</button>
+  </nav>
+</div></header>
+
+<main class="wrap">
+
+<section class="view" id="v-inicio">
+  <div class="hero">
+    <h1>¿Qué desea saber del Hospital El Carmen?</h1>
+    <p>Aquí puede entender, en lenguaje simple, por qué la obra del hospital se detuvo y cuánto cuesta ese retraso. No necesita ser médico, abogado ni político.</p>
+    <dl class="who">
+      <div><dt>Qué es</dt><dd>Nuevo Hospital Materno Infantil, para madres y niños</dd></div>
+      <div><dt>Dónde queda</dt><dd>Huancayo, región Junín, Perú</dd></div>
+      <div><dt>Quién ejecuta la obra</dt><dd>Gobierno Regional de Junín</dd></div>
+    </dl>
+    <div class="card" style="margin-bottom:2rem">
+      <h3>Dos cosas distintas</h3>
+      <p><b>El hospital actual (antiguo)</b> sigue atendiendo, con hacinamiento y deterioro según la Contraloría. <b>El nuevo edificio</b>, en la Av. Calmell del Solar, aún no entra en servicio y es la obra que aquí analizamos.</p>
+    </div>
+    <div class="choices">
+      <button class="choice" data-go="cronologia"><b>¿Qué pasó con la obra?</b><span>Línea de tiempo con inicio, paralizaciones y modificaciones.</span></button>
+      <button class="choice" data-go="calculadora"><b>¿Cuánto cuesta el retraso?</b><span>Calculamos el costo de que el hospital siga sin funcionar.</span></button>
+      <button class="choice" data-go="presupuesto"><b>¿Qué es una partida presupuestal?</b><span>Qué pasa con el dinero que no se gasta a tiempo.</span></button>
+      <button class="choice" data-go="reportar"><b>Quiero reportar o consultar</b><span>Envíe una duda o un aviso sin crear una cuenta.</span></button>
+    </div>
+    <div class="meter" aria-live="polite">
+      <div class="big" id="meterDay">S/ 0</div>
+      <small>costo de oportunidad aproximado por cada día de retraso, con la inversión acumulada de S/ 381.2 millones informada por el Minsa (nov. 2026).</small>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="v-cronologia" hidden>
+  <button class="btn back" data-go="inicio">Volver al inicio</button>
+  <h2>¿Qué pasó con la obra?</h2>
+  <p>Cada hecho lleva su fuente. Las cifras periodísticas deben contrastarse con Invierte.pe y los informes de control.</p>
+  <p class="tab-note"><span class="dot"></span> Normal &nbsp; <span class="dot amb"></span> Por revisar &nbsp; <span class="dot red"></span> Retraso o paralización</p>
+  <ol class="tl">
+    <li class="ok"><h3>4 dic 2015: reinicio de la construcción</h3><p>La obra había comenzado en 2013. Se reinició en la gestión del gobernador Ángel Unchupaico.</p><span class="tag">Fuente: Diario 7 Días</span></li>
+    <li class="stop"><h3>Se resuelve el contrato con la primera empresa</h3><p>Por acumulación máxima de penalidad. Fecha por confirmar.</p><span class="tag">Fuente: Diario 7 Días</span></li>
+    <li class="ok"><h3>9 jun 2021: expediente técnico del saldo de obra</h3><p>Contrato 061-2021/GRJ/ORAF con el Consorcio Blue Bird por S/ 1,074,744 y 60 días, para elaborar el expediente de la parte que faltaba construir.</p><span class="tag">Fuente: contrato 061-2021 (documento aportado)</span></li>
+    <li class="ok"><h3>28 oct 2023: contrato de saldo de obra</h3><p>Con China Gezhouba Group Company Limited Sucursal Perú, por unos S/ 179 millones y 420 días calendario. Vencía el 15 dic 2024.</p><span class="tag">Fuente: Diario 7 Días. Otra fuente da un monto ligeramente distinto.</span></li>
+    <li class="warn"><h3>Set 2024: avance de 38%</h3><p>Control preventivo de la Contraloría: la obra debía culminar en 2024.</p><span class="tag">Fuente: Diario Correo</span></li>
+    <li class="stop"><h3>2024–2025: paralizaciones de subcontratistas</h3><p>Trabajadores subcontratados detuvieron labores. El Gobierno Regional reporta pérdidas de más de S/ 20 millones por fallas heredadas, incluidos equipos pagados que nunca ingresaron.</p><span class="tag">Fuente: Diario Correo</span></li>
+    <li class="warn"><h3>2026: nuevas fechas de entrega</h3><p>Ampliación de plazo N° 11 hasta el 27 may 2026 y luego promesa de entrega el 15 oct 2026.</p><span class="tag">Fuente: Diario Correo, citando el SSI del MEF</span></li>
+    <li class="warn"><h3>18 jul y set 2026: sismo e intervención</h3><p>La Contraloría interviene el hospital actual: equipos deteriorados y fallecimientos denunciados.</p><span class="tag">Fuente: Agencia Andina, 7 set 2026</span></li>
+    <li class="warn"><h3>Nov 2026: 75% de avance físico</h3><p>El Minsa informa una inversión de S/ 381,232,078, con 166 camas, 6 salas quirúrgicas y más de 10 mil equipos.</p><span class="tag">Fuente: Perú Construye, 6 nov 2026</span></li>
+  </ol>
+  <div class="card" style="margin-top:1.5rem">
+    <h3>Semáforo de ejecución (con datos públicos)</h3>
+    <div class="light"><span class="dot red"></span><span>Plazo del saldo de obra: desviación de 166% como mínimo</span></div>
+    <div class="light"><span class="dot amb"></span><span>Avance físico: 75% (Minsa, nov. 2026)</span></div>
+    <div class="light"><span class="dot red"></span><span>Costo: S/ 381 millones frente a S/ 130–160 millones iniciales</span></div>
+  </div>
+</section>
+
+
+
+<section class="view" id="v-calculadora" hidden>
+  <button class="btn back" data-go="inicio">Volver al inicio</button>
+  <h2>¿Cuánto cuesta el retraso?</h2>
+  <p>Cambie los números y vea el resultado al instante. Usa interés compuesto, valor presente y la Ecuación de Fisher.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Datos</h3>
+      <label for="monto">Inversión acumulada (S/)</label><input id="monto" type="number" min="0" value="381232078">
+      <label for="tsd">Tasa social de descuento anual (%)</label><input id="tsd" type="number" min="0" step="0.1" value="8">
+      <label for="meses">Meses de retraso</label><input id="meses" type="number" min="0" value="12">
+      <label for="adic">Adicional de obra (S/)</label><input id="adic" type="number" min="0" value="1500000">
+      <label for="anios">Se pagará dentro de (años)</label><input id="anios" type="number" min="0" value="3">
+      <label for="nom">Tasa nominal anual (%)</label><input id="nom" type="number" step="0.1" value="8">
+      <label for="inf">Inflación anual (%)</label><input id="inf" type="number" step="0.1" value="3">
+    </div>
+    <div class="card" aria-live="polite">
+      <h3>Resultados</h3>
+      <div class="out"><span>Tasa mensual equivalente</span><b id="rIm">–</b></div>
+      <div class="out"><span>Costo de oportunidad por mes</span><b id="rMes">–</b></div>
+      <div class="out"><span>Costo del retraso en el período</span><b id="rRet">–</b></div>
+      <div class="out"><span>Valor de hoy del adicional</span><b id="rVp">–</b></div>
+      <div class="out"><span>Tasa real (Fisher)</span><b id="rReal">–</b></div>
+      <p class="tab-note">Costo del retraso = inversión × [(1 + tasa)^(meses/12) − 1]. Valor de hoy = monto / (1 + tasa)^años.</p>
+      <div class="note">La inversión acumulada es la informada por el Minsa en noviembre de 2026. Los días evitados son un supuesto del equipo.</div>
+    </div>
+  </div>
+  <h2 style="margin-top:2.5rem">¿Vale la pena invertir en esta plataforma? (VAN)</h2>
+  <p>Los ingresos son el costo de oportunidad de los días de retraso que se logran evitar cada año. Usa la inversión acumulada y la tasa de la calculadora de arriba.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Datos del proyecto</h3>
+      <label for="i0">Inversión inicial I₀ (S/)</label><input id="i0" type="number" min="0" value="31000">
+      <label for="op">Costo de operación por año (S/)</label><input id="op" type="number" min="0" value="10000">
+      <label for="nper">Periodos n (años)</label><input id="nper" type="number" min="1" max="20" value="5">
+      <label for="evit">Días de retraso evitados por año</label><input id="evit" type="number" min="0" step="0.1" value="1">
+    </div>
+    <div class="card" aria-live="polite">
+      <h3>Resultado</h3>
+      <div class="formula">VAN = Σ [ Fₜ / (1 + k)ᵗ ] − I₀</div>
+      <div class="out"><span>Ingresos por año (A)</span><b id="vBen">–</b></div>
+      <div class="out"><span>VAN</span><b id="vVan">–</b></div>
+      <div class="out"><span>TIR</span><b id="vTir">–</b></div>
+      <div class="out"><span>Relación beneficio/costo</span><b id="vBc">–</b></div>
+      <p id="vVer" role="status" style="margin-top:.6rem"></p>
+    </div>
+  </div>
+  <div class="card scroll" style="margin-top:1.25rem">
+    <h3>Flujos netos por año</h3>
+    <table class="tbl"><thead><tr><th>Año t</th><th>Ingresos (A)</th><th>Egresos (B)</th><th>Fₜ = A − B</th><th>Factor</th><th>Valor presente</th></tr></thead><tbody id="vRows"></tbody></table>
+    <p class="tab-note" style="margin-top:.7rem">Si el VAN es mayor que 0, o la TIR es mayor que k, la inversión se acepta. La TIR es la tasa que hace el VAN igual a cero.</p>
+  </div>
+</section>
+
+<section class="view" id="v-presupuesto" hidden>
+  <button class="btn back" data-go="inicio">Volver al inicio</button>
+  <h2>¿Qué es una partida presupuestal?</h2>
+  <p>Es el dinero que el Estado reserva para una obra. Si el hospital empezó a construirse, es porque tenía una partida asignada. Si ese dinero no se gasta dentro del plazo, vuelve al Estado y se considera mala capacidad de ejecución.</p>
+  <div class="card" style="max-width:40rem">
+    <h3>Ejemplo con S/ 1,000</h3>
+    <p class="tab-note">Si le entregan S/ 1,000 para un proyecto y gasta solo una parte, el resto se devuelve.</p>
+    <label for="gastado">Dinero gastado a tiempo: <span id="gLbl">400</span> soles</label>
+    <input id="gastado" type="range" min="0" max="1000" step="50" value="400">
+    <div class="bar" style="margin-top:1rem" aria-hidden="true"><i class="sp" id="bSp"></i><i class="rv" id="bRv"></i></div>
+    <div class="out"><span>Se gastó en la obra</span><b id="gSp">–</b></div>
+    <div class="out"><span>Se devuelve al Estado</span><b id="gRv">–</b></div>
+  </div>
+</section>
+
+<section class="view" id="v-reportar" hidden>
+  <button class="btn back" data-go="inicio">Volver al inicio</button>
+  <h2>Reportar o consultar</h2>
+  <p>No necesita cuenta. El equipo revisa cada mensaje antes de publicarlo, para evitar acusaciones sin sustento.</p>
+  <div class="card" style="max-width:40rem" id="repBox">
+    <label for="tipo">Qué desea hacer</label>
+    <select id="tipo"><option>Hacer una consulta</option><option>Reportar una irregularidad</option><option>Aportar un documento o fuente</option></select>
+    <label for="msg">Mensaje</label>
+    <textarea id="msg" rows="5" placeholder="Cuéntenos qué sabe o qué quiere saber"></textarea>
+    <label for="mail">Correo para responderle (opcional)</label>
+    <input id="mail" type="email">
+    <button class="btn" id="send">Enviar mensaje</button>
+    <p id="repMsg" role="status" style="margin-top:1rem"></p>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap footer-grid">
+    <div><h3>CarmenClaro</h3><p>Plataforma pública y gratuita para entender qué pasó con el nuevo Hospital Materno Infantil El Carmen de Huancayo y cuánto cuesta su retraso.</p></div>
+    <div><h3>Fuentes</h3><ul><li>Invierte.pe (Ministerio de Economía y Finanzas)</li><li>Contraloría General de la República</li><li>Gobierno Regional de Junín</li><li>Prensa regional y nacional</li></ul></div>
+    <div><h3>Equipo</h3><ul><li>Asto Condori Walter Hugo</li><li>Vargas Flores Fabio Miguel</li><li>Gonzales Castro Noel Eduardo</li></ul><p>Ingeniería Económica – Grupo 4</p></div>
+  </div>
+  <div class="wrap footer-note">Las presuntas irregularidades se presentan como tales, con la fuente que las sustenta. Este es un proyecto académico, no una página oficial del Gobierno Regional.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
